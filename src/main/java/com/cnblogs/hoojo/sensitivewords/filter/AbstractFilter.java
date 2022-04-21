@@ -58,6 +58,11 @@ public abstract class AbstractFilter extends AbstractSensitiveWordsFilter {
 	}
 
 	@Override
+	public void forceInit() throws RuntimeException {
+
+	}
+
+	@Override
 	public void refresh() throws RuntimeException {
 
 		executor.refresh();

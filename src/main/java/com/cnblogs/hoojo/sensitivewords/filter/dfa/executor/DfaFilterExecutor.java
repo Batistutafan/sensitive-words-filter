@@ -27,6 +27,10 @@ public final class DfaFilterExecutor extends AbstractFilterExecutor<HashMap<Char
 	public static final DfaFilterExecutor getInstance() {
 		return SingleFactory.INSTANCE;
 	}
+
+	public static final DfaFilterExecutor getInstanceV2() {
+		return new DfaFilterExecutor();
+	}
 	
 	private DfaFilterExecutor() {
 		super("DFA 脱敏算法实现支持类");

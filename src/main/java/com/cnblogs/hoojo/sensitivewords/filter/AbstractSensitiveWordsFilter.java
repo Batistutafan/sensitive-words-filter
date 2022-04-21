@@ -43,7 +43,8 @@ public abstract class AbstractSensitiveWordsFilter extends ApplicationLogging im
 	}
 	
 	public abstract void init() throws RuntimeException;
-	
+	public abstract void forceInit() throws RuntimeException;
+
 	public abstract void refresh() throws RuntimeException;
 	
 	public abstract void destroy() throws RuntimeException;

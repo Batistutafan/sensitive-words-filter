@@ -97,6 +97,15 @@ public abstract class AbstractFilterExecutor<T> extends AbstractSensitiveWordsFi
 	}
 
 	@Override
+	public void forceInit() throws RuntimeException {
+		try {
+			refresh();
+		} catch (Exception e) {
+			throw new RuntimeException(e);
+		}
+	}
+
+	@Override
 	public void refresh() throws RuntimeException {
 		debug("{}: 刷新数据", getListenerName());
 		
